@@ -1,6 +1,6 @@
 {
   "name": "mylib_progvar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My first library for testing purposes",
   "main": "src/index.js",
   "scripts": {
