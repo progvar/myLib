@@ -1,0 +1,26 @@
+{
+  "name": "mylib",
+  "version": "1.0.0",
+  "description": "My first library for testing purposes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progvar/myLib.git"
+  },
+  "keywords": [
+    "first",
+    "library"
+  ],
+  "author": "Gyula Váradi <prog.varadi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/progvar/myLib/issues"
+  },
+  "homepage": "https://github.com/progvar/myLib#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
