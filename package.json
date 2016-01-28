@@ -2,7 +2,7 @@
   "name": "mylib_progvar",
   "description": "My first library for testing purposes",
   "main": "src/index.js",
-  "version":"1.4.1",
+  "version":"1.4.2",
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/index.test.js"
