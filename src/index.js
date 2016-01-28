@@ -6,7 +6,7 @@ var getRandom = ura(allText);
 
 var http = require('http');
 var server = http.createServer(requestHandler);
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 
 
 function requestHandler(req, res){
