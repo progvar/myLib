@@ -1,14 +1,14 @@
 {
   "name": "mylib_progvar",
-  "version": "1.2.0",
   "description": "My first library for testing purposes",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/progvar/myLib.git"
+    "url": "https://github.com/progvar/myLib.git"
   },
   "keywords": [
     "first",
@@ -23,5 +23,13 @@
   "dependencies": {
     "unique-random-array": "1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.5.0",
+    "cz-conventional-changelog": "1.1.5",
+    "mocha": "2.4.4"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
