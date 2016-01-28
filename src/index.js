@@ -13,8 +13,8 @@ function requestHandler(req, res){
   res.end(getRandom());
 }
 
-server.listen(PORT, function(){
-  console.log('Listening on port number: ' + PORT);
+server.listen(process.env.PORT, function(){
+  console.log('Listening on port number: ' + process.env.PORT);
 });
 // ^^ webserver ^^
 
