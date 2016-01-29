@@ -4,7 +4,7 @@ var getRandom = ura(allText);
 
 // Just to test heroku we need a webserver
 var PORT = process.env.PORT || 3000;
-var http = require('http');
+const http = require('http');
 
 http.createServer(requestHandler).listen(PORT, function(){
   console.log('Listening on port number: ' + PORT);
@@ -12,7 +12,7 @@ http.createServer(requestHandler).listen(PORT, function(){
 
 
 function requestHandler(req, res){
-  res.end(getRandom());
+  res.end(getRandom().toString());
 }
 
 // ^^ webserver ^^
