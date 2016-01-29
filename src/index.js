@@ -2,16 +2,17 @@ var allText = require('./some_text.json');
 var ura = require('unique-random-array');
 var getRandom = ura(allText);
 
+// webserver
 
-var http = require('http');
+const http = require('http');
+const port = process.env.PORT || 3000;
 
-var server = http.createServer(function (request, response) {
+http.createServer(function (request, response) {
   response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World\n");
+  response.end(getRandom().toString());
+}).listen(port, function(){
+  console.log('Listening on ' + port);
 });
-server.listen(process.env.PORT || 3000);
-
-console.log("Listening");
 // ^^ webserver ^^
 
 module.exports = {
