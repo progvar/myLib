@@ -4,8 +4,10 @@
   "main": "src/index.js",
   "version":"1.4.2",
   "scripts": {
-    "commit": "git-cz",
-    "test": "mocha src/index.test.js"
+    "start": "node src/index.js",
+    "test": "mocha src/index.test.js",
+    "commit": "git-cz"
+
   },
   "repository": {
     "type": "git",
