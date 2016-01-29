@@ -3,19 +3,18 @@ var ura = require('unique-random-array');
 var getRandom = ura(allText);
 
 // Just to test heroku we need a webserver
-
-var http = require('http');
-var server = http.createServer(requestHandler);
 var PORT = process.env.PORT || 3000;
+var http = require('http');
+
+http.createServer(requestHandler).listen(PORT, function(){
+  console.log('Listening on port number: ' + PORT);
+});
 
 
 function requestHandler(req, res){
   res.end(getRandom());
 }
 
-server.listen(process.env.PORT, function(){
-  console.log('Listening on port number: ' + process.env.PORT);
-});
 // ^^ webserver ^^
 
 module.exports = {
