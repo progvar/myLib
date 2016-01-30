@@ -2,10 +2,12 @@
   "name": "mylib_progvar",
   "description": "My first library for testing purposes",
   "main": "src/index.js",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha src/index.test.js",
+    "test": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js",
+    "check-coverage": "istanbul check-coverage --statements 60 --branches 60 --functions 60 --lines 60",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "commit": "git-cz"
   },
   "repository": {
@@ -27,9 +29,11 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "codecov": "1.0.1",
     "commitizen": "2.5.0",
     "cz-conventional-changelog": "1.1.5",
     "ghooks": "1.0.3",
+    "istanbul": "0.4.2",
     "mocha": "2.4.4"
   },
   "czConfig": {
@@ -37,8 +41,8 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run check-coverage",
+      "post-commit": "npm run report-coverage"
     }
   }
-
 }
