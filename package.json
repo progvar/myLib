@@ -1,9 +1,12 @@
 {
   "name": "mylib_progvar",
   "description": "My first library for testing purposes",
-  "main": "src/index.js",
-  "version": "1.5.0",
+  "main": "dist/index.js",
+  "version": "1.6.0",
   "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/index.js -o dist/index.js",
+    "postbuild": "cp src/some_text.json dist/some_text.json",
     "start": "node src/index.js",
     "test": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js",
     "check-coverage": "istanbul check-coverage --statements 60 --branches 60 --functions 60 --lines 60",
@@ -28,6 +31,7 @@
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "6.4.5",
     "chai": "3.5.0",
     "codecov": "1.0.1",
     "commitizen": "2.5.0",
@@ -41,7 +45,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test && npm run check-coverage",
+      "pre-commit": "npm run test && npm run check-coverage && npm run build",
       "post-commit": "npm run report-coverage"
     }
   }
