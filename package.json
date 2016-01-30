@@ -2,12 +2,11 @@
   "name": "mylib_progvar",
   "description": "My first library for testing purposes",
   "main": "src/index.js",
-  "version":"1.4.2",
+  "version": "1.4.2",
   "scripts": {
     "start": "node src/index.js",
     "test": "mocha src/index.test.js",
     "commit": "git-cz"
-
   },
   "repository": {
     "type": "git",
@@ -30,9 +29,16 @@
     "chai": "3.5.0",
     "commitizen": "2.5.0",
     "cz-conventional-changelog": "1.1.5",
+    "ghooks": "1.0.3",
     "mocha": "2.4.4"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   }
+
 }
