@@ -45,7 +45,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test && npm run check-coverage && npm run build",
+      "pre-commit": "npm run test && npm run check-coverage && npm run build && git add dist/index.js",
       "post-commit": "npm run report-coverage"
     }
   }
