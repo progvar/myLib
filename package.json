@@ -2,7 +2,7 @@
   "name": "mylib_progvar",
   "description": "My first library for testing purposes",
   "main": "dist/index.js",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src/index.js -o dist/index.js",
