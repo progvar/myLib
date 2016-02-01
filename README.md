@@ -3,7 +3,7 @@ Creating my first library for node.js
 
 #Description
 
-Currently my webserver is in the same repo as my module.
+Currently there is a webserver along with the module to see the module in action on Heroku.
 'npm publish' will only push what's necessary for the module itself by using .npmignore.
 
 **DevDependencies in use**:
