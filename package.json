@@ -51,8 +51,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test && npm run eslint && npm run check-coverage && npm run build && git add dist/index.js",
-      "post-commit": "npm run report-coverage"
+      "pre-commit": "npm run test && npm run eslint && npm run check-coverage && npm run build && git add dist/index.js"
     }
   }
 }

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const allText = require('./some_text.json');
 const ura = require('unique-random-array');
 const getRandom = ura(allText);
