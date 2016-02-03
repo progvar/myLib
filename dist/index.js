@@ -1,20 +1,21 @@
-var allText = require('./some_text.json');
-var ura = require('unique-random-array');
-var getRandom = ura(allText);
+'use strict';
 
-module.exports = {
-  all: allText,
-  random: randomFunc
-};
+const allText = require('./some_text.json');
+const ura = require('unique-random-array');
+const getRandom = ura(allText);
 
 function randomFunc(number) {
-  if (number === undefined) {
-    return getRandom();
-  } else {
-    var texts = [];
+  if (number !== undefined) {
+    let texts = [];
     for (var i = 0; i < number; i++) {
       texts.push(getRandom());
     }
     return texts;
   }
+  return getRandom();
 }
+
+module.exports = {
+  all: allText,
+  random: randomFunc
+};
